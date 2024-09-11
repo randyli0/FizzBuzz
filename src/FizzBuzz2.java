@@ -5,25 +5,21 @@ public class FizzBuzz2 {
         int count = 0;
         while (count < 100){
 
-            doFizzBuzz(count);
+            boolean divisibleby3 = count % 3 == 0;
+            boolean divisibleby5 = count % 5 == 0;
+
+            if (divisibleby3 && divisibleby5){
+                System.out.println("fizz Buzz");
+            } else if (divisibleby3){
+                System.out.println("Fizz");
+            } else if (divisibleby5){
+                System.out.println("Buzz");
+            } else{
+                System.out.println(count);
+            }
             count++;
         }
 
 
-    }
-
-    private static void doFizzBuzz(int count) {
-        boolean divisibleby3 = count % 3 == 0;
-        boolean divisibleby5 = count % 5 == 0;
-
-        if (divisibleby3 && divisibleby5){
-            System.out.println("fizz Buzz");
-        } else if (divisibleby3){
-            System.out.println("Fizz");
-        } else if (divisibleby5){
-            System.out.println("Buzz");
-        } else{
-            System.out.println(count);
-        }
     }
 }
